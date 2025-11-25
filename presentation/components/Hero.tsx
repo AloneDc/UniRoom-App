@@ -10,7 +10,7 @@ const Hero: FC = () => {
       {/* Fondo con imagen + overlay + gradiente */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('/assets/Header1.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/60 via-[#00E0C6]/40 to-white/10 backdrop-blur-sm" />
 
