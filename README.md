@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# 🏠 UniRoom – Plataforma de Alojamiento Estudiantil
+
+UniRoom es una plataforma web moderna diseñada para conectar estudiantes universitarios con arrendadores de manera rápida, segura y eficiente.  
+Permite publicar habitaciones, gestionar reservas, explorar alojamientos disponibles y administrar perfiles de usuario con una interfaz intuitiva y responsiva.
+
+
+## ✨ Características principales
+
+### 👤 Gestión de usuarios
+- Registro e inicio de sesión con **Supabase Auth**
+- Roles disponibles: **Estudiante** y **Arrendador**
+- Perfil personal editable
+- Fotografía de usuario y datos de contacto
+
+### 🏘️ Gestión de habitaciones
+- Publicación de habitaciones por arrendadores
+- Carga de fotos mediante Supabase Storage
+- Precio, ubicación, servicios y tipo de habitación
+- Disponibilidad en tiempo real
+
+### 🔎 Búsqueda inteligente
+- Filtros por ubicación, precio y tipo de habitación
+- Habitaciones destacadas
+- Página individual con detalles completos
+
+### 📆 Sistema de reservas
+- Estudiantes pueden realizar reservas
+- Arrendadores pueden gestionar sus solicitudes
+- Estados: *pending*, *confirmed*, *cancelled*
+
+### ⭐ Reseñas y calificaciones
+- Calificación de habitaciones con puntaje de 1 a 5
+- Comentarios públicos
+
+### 🎨 Diseño UI/UX moderno
+- Diseño completamente responsivo
+- Animaciones con **Framer Motion**
+- Estilo visual con **TailwindCSS**
+
+
+## 🧰 Tecnologías utilizadas
+
+| Tecnología | Propósito |
+|-----------|-----------|
+| **Next.js 14 (App Router)** | Frontend y SSR |
+| **React 18** | Componentización |
+| **TypeScript** | Tipado estático |
+| **Supabase (Auth, DB, Storage)** | Backend completo |
+| **PostgreSQL** | Base de datos |
+| **TailwindCSS** | Estilos responsivos |
+| **Framer Motion** | Animaciones |
+| **Lucide Icons** | Iconos del proyecto |
+
+---
+
+## 📂 Estructura del proyecto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+src/
+ ├── app/                     # Rutas del App Router
+ │   ├── (auth)/              # Login y registro
+ │   ├── (main)/              # Páginas principales
+ │   ├── layout.tsx           # Layout global
+ │   └── page.tsx             # Homepage
+ ├── presentation/
+ │   ├── components/          # Componentes reutilizables
+ │   ├── context/             # AuthContext, Providers
+ │   └── ui/                  # Elementos UI
+ ├── infrastructure/
+ │   ├── supabase/            # Cliente Supabase
+ │   ├── storage/             # Servicios de archivos
+ │   └── api/                 # Servicios externos
+ ├── domain/
+ │   ├── services/            # RoomService, AuthService
+ │   └── models/              # Entidades y tipos
+ ├── shared/
+ │   ├── validations/         # Schemas Zod
+ │   └── types/               # Tipos globales
+ ├── styles/
+ │   └── globals.css
+````
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗄️ Base de datos (Supabase)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Tablas principales:
 
-## Learn More
+* `users` → perfiles (student / landlord)
+* `rooms` → habitaciones publicadas
+* `room_photos` → fotos de habitaciones
+* `reservations` → reservas por estudiantes
+* `reviews` → calificaciones y comentarios
+* `support_messages` → soporte al usuario
 
-To learn more about Next.js, take a look at the following resources:
+Base de datos: **PostgreSQL**
+Backend: **Supabase**
+Storage: **Supabase Storage**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📜 Licencia
 
-## Deploy on Vercel
+Proyecto distribuido bajo licencia **MIT**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
