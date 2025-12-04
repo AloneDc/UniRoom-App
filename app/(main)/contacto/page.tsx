@@ -93,8 +93,8 @@ export default function ContactPage() {
                 <ContactMethod
                   icon={<Mail className="w-5 h-5" />}
                   title="Email"
-                  value="soporte@uniroom.com"
-                  href="mailto:soporte@uniroom.com"
+                  value="quintero2001.205@gmail.com"
+                  href="mailto:quintero2001.205@gmail.com"
                   color="text-blue-600"
                   bgColor="bg-blue-50"
                 />
@@ -102,8 +102,8 @@ export default function ContactPage() {
                 <ContactMethod
                   icon={<Phone className="w-5 h-5" />}
                   title="WhatsApp"
-                  value="+51 987 654 321"
-                  href="https://wa.me/51987654321"
+                  value="+51 903 112 126"
+                  href="https://wa.me/51903112126"
                   color="text-green-600"
                   bgColor="bg-green-50"
                 />

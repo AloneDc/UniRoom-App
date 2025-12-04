@@ -205,12 +205,12 @@ export default async function HomePage() {
                 color: "bg-purple-500",
               },
               {
-                name: "Universidad Nacional de Piura",
+                name: "Universidad Privada Antenor Orrego",
                 icon: "🏛️",
                 color: "bg-teal-500",
               },
               {
-                name: "Instituto IDAT Piura",
+                name: "Universidad Tecnologíca del Perú",
                 icon: "💻",
                 color: "bg-orange-500",
               },
@@ -325,7 +325,7 @@ export default async function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/publicar"
+              href="/login"
               className="inline-flex items-center justify-center gap-2 bg-white text-[#6C63FF] font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <Home className="w-5 h-5" />
