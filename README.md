@@ -1,143 +1,198 @@
-🏠 UniRoom – Plataforma de Alojamiento Estudiantil
+¡Perfecto! Aquí tienes el **README.md EXACTO en formato Markdown puro**, listo para pegar directamente en un archivo `README.md` sin modificar nada más.
 
-Plataforma web moderna diseñada para conectar estudiantes universitarios con arrendadores de manera rápida, segura y eficiente.
-Los usuarios pueden registrarse, publicar habitaciones, realizar reservas, explorar alojamiento disponible y gestionar su perfil desde un panel intuitivo y responsivo.
+---
 
-✨ Características principales
-👤 Gestión de usuarios
+````md
+# 🏠 UniRoom – Plataforma de Alojamiento Estudiantil
 
-Registro e inicio de sesión con Supabase Auth
+UniRoom es una plataforma web moderna diseñada para conectar estudiantes universitarios con arrendadores de manera rápida, segura y eficiente.  
+Permite publicar habitaciones, gestionar reservas, explorar alojamientos disponibles y administrar perfiles de usuario con una interfaz intuitiva y responsiva.
 
-Roles: Estudiante y Arrendador
+---
 
-Perfil personal editable
+## ✨ Características principales
 
-Fotografía de usuario y datos de contacto
+### 👤 Gestión de usuarios
+- Registro e inicio de sesión con **Supabase Auth**
+- Roles disponibles: **Estudiante** y **Arrendador**
+- Perfil personal editable
+- Fotografía de usuario y datos de contacto
 
-🏘️ Gestión de habitaciones
+### 🏘️ Gestión de habitaciones
+- Publicación de habitaciones por arrendadores
+- Carga de fotos mediante Supabase Storage
+- Precio, ubicación, servicios y tipo de habitación
+- Disponibilidad en tiempo real
 
-Publicación de habitaciones por arrendadores
+### 🔎 Búsqueda inteligente
+- Filtros por ubicación, precio y tipo de habitación
+- Habitaciones destacadas
+- Página individual con detalles completos
 
-Carga de fotos mediante Supabase Storage
+### 📆 Sistema de reservas
+- Estudiantes pueden realizar reservas
+- Arrendadores pueden gestionar sus solicitudes
+- Estados: *pending*, *confirmed*, *cancelled*
 
-Precio, ubicación, servicios y tipo de habitación
+### ⭐ Reseñas y calificaciones
+- Calificación de habitaciones con puntaje de 1 a 5
+- Comentarios públicos
 
-Disponibilidad y estado actualizado
+### 🎨 Diseño UI/UX moderno
+- Diseño completamente responsivo
+- Animaciones con **Framer Motion**
+- Estilo visual con **TailwindCSS**
 
-🔎 Búsqueda inteligente
+---
 
-Filtros por ubicación, precio y tipo de habitación
+## 🧰 Tecnologías utilizadas
 
-Listado de habitaciones destacadas
+| Tecnología | Propósito |
+|-----------|-----------|
+| **Next.js 14 (App Router)** | Frontend y SSR |
+| **React 18** | Componentización |
+| **TypeScript** | Tipado estático |
+| **Supabase (Auth, DB, Storage)** | Backend completo |
+| **PostgreSQL** | Base de datos |
+| **TailwindCSS** | Estilos responsivos |
+| **Framer Motion** | Animaciones |
+| **Lucide Icons** | Iconos del proyecto |
 
-Página individual con detalles de cada propiedad
+---
 
-📆 Sistema de reservas
+## 📂 Estructura del proyecto
 
-Estudiantes pueden reservar habitaciones
-
-Arrendadores gestionan las reservas recibidas
-
-Estado de reserva: pending, confirmed, cancelled
-
-⭐ Reseñas y calificaciones
-
-Cada habitación puede recibir reseñas
-
-Calificación de 1 a 5 estrellas
-
-Comentarios visibles para otros usuarios
-
-🎨 Diseño UI/UX moderno
-
-Totalmente responsivo
-
-Animaciones con Framer Motion
-
-Estilo limpio y profesional con TailwindCSS
-
-🧰 Tecnologías utilizadas
-Tecnología	Uso
-Next.js 14 (App Router)	Frontend + lógica server-side
-React 18	Componentes y estado
-TypeScript	Tipado estático y seguridad
-Supabase (Auth, Database, Storage)	Backend completo
-PostgreSQL	Base de datos
-TailwindCSS	Estilos modernos y responsivos
-Framer Motion	Animaciones fluidas
-Lucide Icons	Iconografía moderna
-📂 Estructura del proyecto
+```bash
 src/
  ├── app/                     # Rutas del App Router
- │   ├── (auth)/              # Login, registro
- │   ├── (main)/              # Paginas principales
- │   ├── layout.tsx           # Layout general
- │   └── page.tsx             # Página Home
+ │   ├── (auth)/              # Login y registro
+ │   ├── (main)/              # Páginas principales
+ │   ├── layout.tsx           # Layout global
+ │   └── page.tsx             # Homepage
  ├── presentation/
  │   ├── components/          # Componentes reutilizables
  │   ├── context/             # AuthContext, Providers
  │   └── ui/                  # Elementos UI
  ├── infrastructure/
- │   ├── supabase/            # Cliente de Supabase
- │   ├── storage/             # Servicios de almacenamiento
+ │   ├── supabase/            # Cliente Supabase
+ │   ├── storage/             # Servicios de archivos
  │   └── api/                 # Servicios externos
  ├── domain/
- │   ├── services/            # Lógica de negocio (RoomService, AuthService...)
- │   └── models/              # Tipos y entidades
+ │   ├── services/            # RoomService, AuthService
+ │   └── models/              # Entidades y tipos
  ├── shared/
  │   ├── validations/         # Schemas Zod
  │   └── types/               # Tipos globales
  ├── styles/
  │   └── globals.css
+````
 
-🗄️ Diseño de Base de Datos
+---
 
-Tablas principales:
+## 🗄️ Base de datos (Supabase)
 
-users → perfiles de usuarios (student / landlord)
+### Tablas principales:
 
-rooms → habitaciones publicadas
+* `users` → perfiles (student / landlord)
+* `rooms` → habitaciones publicadas
+* `room_photos` → fotos de habitaciones
+* `reservations` → reservas por estudiantes
+* `reviews` → calificaciones y comentarios
+* `support_messages` → soporte al usuario
 
-room_photos → imágenes de cada habitación
+Base de datos: **PostgreSQL**
+Backend: **Supabase**
+Storage: **Supabase Storage**
 
-reservations → reservas de estudiantes
+---
 
-reviews → calificaciones y comentarios
+## 🔧 Instalación y configuración
 
-support_messages → mensajes al equipo de soporte
+### 1️⃣ Clonar el repositorio
 
-Motor: PostgreSQL (Supabase)
-Autenticación: Supabase Auth
-Almacenamiento: Supabase Storage
-
-🔧 Instalación y configuración
-1️⃣ Clona el repositorio
+```bash
 git clone https://github.com/tuusuario/uniroom.git
 cd uniroom
+```
 
-2️⃣ Instala dependencias
+### 2️⃣ Instalar dependencias
+
+```bash
 npm install
+```
 
-3️⃣ Configura las variables de entorno
+### 3️⃣ Configurar variables de entorno
 
-Crea un archivo .env.local con:
+Crear `.env.local`:
 
-NEXT_PUBLIC_SUPABASE_URL=tu_url_aqui
-NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_anon_key_aqui
-SUPABASE_SERVICE_ROLE_KEY=solo_si_usas_backend
+```env
+NEXT_PUBLIC_SUPABASE_URL=tu_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_key
+SUPABASE_SERVICE_ROLE_KEY=opcional
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
-4️⃣ Ejecuta el proyecto
+### 4️⃣ Ejecutar el proyecto
+
+```bash
 npm run dev
+```
 
-5️⃣ Abre en el navegador
+Abrir en el navegador:
+👉 [http://localhost:3000](http://localhost:3000)
 
-👉 http://localhost:3000
+---
 
-📸 Capturas (ajusta las rutas si deseas)
+## 📸 Capturas (opcional)
 
-Puedes subir tus imágenes a /public/screenshots/
+Agrega tus capturas en `/public/screenshots/`:
 
+```md
 ![Home Screenshot](public/screenshots/home.png)
-![Room Detail Screenshot](public/screenshots/room-detail.png)
-![Dashboard Screenshot](public/screenshots/dashboard.png)
+![Room Detail](public/screenshots/room-detail.png)
+![Dashboard](public/screenshots/dashboard.png)
+```
+
+---
+
+## 🚀 Roadmap
+
+* [ ] Chat en tiempo real entre usuarios
+* [ ] Google Maps API para ubicación
+* [ ] Filtros avanzados por servicios
+* [ ] Panel administrativo global
+* [ ] App móvil con React Native
+* [ ] Mejoras SEO y Lighthouse
+
+---
+
+## 📜 Licencia
+
+Proyecto distribuido bajo licencia **MIT**.
+
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas.
+Puedes abrir un **issue** o un **pull request**.
+
+---
+
+## 💼 Autor
+
+**Eduardo Calderón**
+Desarrollador Web – Piura, Perú
+Apasionado por tecnologías modernas y plataformas inteligentes.
+
+```
+
+---
+
+Si quieres, te hago también:
+
+✅ Badges para el README  
+✅ Un banner gráfico de presentación  
+✅ Un logo SVG profesional para UniRoom  
+¿Quieres agregar algo visual?
+```
