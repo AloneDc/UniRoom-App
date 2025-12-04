@@ -1,14 +1,10 @@
-¡Perfecto! Aquí tienes el **README.md EXACTO en formato Markdown puro**, listo para pegar directamente en un archivo `README.md` sin modificar nada más.
 
----
 
-````md
 # 🏠 UniRoom – Plataforma de Alojamiento Estudiantil
 
 UniRoom es una plataforma web moderna diseñada para conectar estudiantes universitarios con arrendadores de manera rápida, segura y eficiente.  
 Permite publicar habitaciones, gestionar reservas, explorar alojamientos disponibles y administrar perfiles de usuario con una interfaz intuitiva y responsiva.
 
----
 
 ## ✨ Características principales
 
@@ -43,7 +39,6 @@ Permite publicar habitaciones, gestionar reservas, explorar alojamientos disponi
 - Animaciones con **Framer Motion**
 - Estilo visual con **TailwindCSS**
 
----
 
 ## 🧰 Tecnologías utilizadas
 
@@ -153,31 +148,11 @@ Agrega tus capturas en `/public/screenshots/`:
 ![Dashboard](public/screenshots/dashboard.png)
 ```
 
----
-
-## 🚀 Roadmap
-
-* [ ] Chat en tiempo real entre usuarios
-* [ ] Google Maps API para ubicación
-* [ ] Filtros avanzados por servicios
-* [ ] Panel administrativo global
-* [ ] App móvil con React Native
-* [ ] Mejoras SEO y Lighthouse
-
----
 
 ## 📜 Licencia
 
 Proyecto distribuido bajo licencia **MIT**.
 
----
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas.
-Puedes abrir un **issue** o un **pull request**.
-
----
 
 ## 💼 Autor
 
@@ -185,14 +160,4 @@ Puedes abrir un **issue** o un **pull request**.
 Desarrollador Web – Piura, Perú
 Apasionado por tecnologías modernas y plataformas inteligentes.
 
-```
 
----
-
-Si quieres, te hago también:
-
-✅ Badges para el README  
-✅ Un banner gráfico de presentación  
-✅ Un logo SVG profesional para UniRoom  
-¿Quieres agregar algo visual?
-```
