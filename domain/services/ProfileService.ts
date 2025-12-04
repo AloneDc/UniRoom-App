@@ -17,15 +17,23 @@ export const ProfileService = {
    * 🔹 Subir foto de perfil a Supabase Storage
    */
   async uploadProfilePhoto(file: File, userId: string): Promise<string> {
-    const fileName = `profiles/${userId}-${Date.now()}.${file.name
-      .split(".")
-      .pop()}`;
-    const { error } = await supabase.storage
+    const fileExt = file.name.split(".").pop();
+    const fileName = `profiles/${userId}-${Date.now()}.${fileExt}`;
+
+    const { data, error } = await supabase.storage
       .from("avatars")
-      .upload(fileName, file);
+      .upload(fileName, file, {
+        cacheControl: "3600",
+        upsert: true, // permite reemplazar si el usuario sube otra foto
+        contentType: file.type,
+      });
+
     if (error) throw new Error(error.message);
 
-    const { data } = supabase.storage.from("avatars").getPublicUrl(fileName);
-    return data.publicUrl;
+    const { data: publicUrlData } = supabase.storage
+      .from("avatars")
+      .getPublicUrl(fileName);
+
+    return publicUrlData.publicUrl;
   },
 };

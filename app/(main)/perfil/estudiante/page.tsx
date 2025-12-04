@@ -187,7 +187,7 @@ export default function StudentProfilePage() {
                   </Button>
                   <Button
                     variant="outline"
-                    onClick={() => router.push("/perfil/estudiante/reseñas")}
+                    onClick={() => router.push("/perfil/estudiante/resenas")}
                     className="border-[#6C63FF]/40 text-[#6C63FF] hover:bg-[#6C63FF]/10"
                   >
                     <Star className="h-4 w-4 mr-1" /> Mis reseñas
