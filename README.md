@@ -99,65 +99,10 @@ Base de datos: **PostgreSQL**
 Backend: **Supabase**
 Storage: **Supabase Storage**
 
----
-
-## 🔧 Instalación y configuración
-
-### 1️⃣ Clonar el repositorio
-
-```bash
-git clone https://github.com/tuusuario/uniroom.git
-cd uniroom
-```
-
-### 2️⃣ Instalar dependencias
-
-```bash
-npm install
-```
-
-### 3️⃣ Configurar variables de entorno
-
-Crear `.env.local`:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=tu_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_key
-SUPABASE_SERVICE_ROLE_KEY=opcional
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-```
-
-### 4️⃣ Ejecutar el proyecto
-
-```bash
-npm run dev
-```
-
-Abrir en el navegador:
-👉 [http://localhost:3000](http://localhost:3000)
-
----
-
-## 📸 Capturas (opcional)
-
-Agrega tus capturas en `/public/screenshots/`:
-
-```md
-![Home Screenshot](public/screenshots/home.png)
-![Room Detail](public/screenshots/room-detail.png)
-![Dashboard](public/screenshots/dashboard.png)
-```
-
 
 ## 📜 Licencia
 
 Proyecto distribuido bajo licencia **MIT**.
 
-
-## 💼 Autor
-
-**Eduardo Calderón**
-Desarrollador Web – Piura, Perú
-Apasionado por tecnologías modernas y plataformas inteligentes.
 
 
